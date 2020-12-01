@@ -12,6 +12,9 @@ export default function Settings({ navigation }: any) {
   }
 
   function handleLogout() {
+    if(isSignout){
+      return;
+    }
     setisSignout(true)
     logoutUser()
     setTimeout(() => {

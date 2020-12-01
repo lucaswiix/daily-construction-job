@@ -6,6 +6,8 @@ import { DismissKeyboard } from '../../components/DismissKeyboard';
 import { IUser } from '../../redux/users/types';
 import { styles } from './styles';
 
+
+
 const Login: React.FC<any> = ({ navigation }) => {
   const [getEmail, setEmail] = useState('');
   const [getPassword, setPassword] = useState('');
@@ -78,7 +80,6 @@ const Login: React.FC<any> = ({ navigation }) => {
         <TouchableOpacity onPress={handleLogin} style={styles.button}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
-        <Text style={styles.createAccountText}>Não tem conta? <Text style={styles.createAccountLink} onPress={() => navigation.navigate('Signup')}>Criar agora!</Text></Text>
         <Text style={styles.buttonError}>{error}</Text>
       </KeyboardAvoidingView>
     </DismissKeyboard>

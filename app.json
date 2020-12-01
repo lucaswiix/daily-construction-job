@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "daily-construction",
+    "name": "Diario de obra",
     "slug": "daily-construction",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "diario.exp.exponent"
     },
     "web": {
       "favicon": "./assets/favicon.png"

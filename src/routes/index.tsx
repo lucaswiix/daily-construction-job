@@ -83,7 +83,7 @@ const createBottomBar = createMaterialBottomTabNavigator(
     activeColor: '#73DA86',
 
     inactiveColor: '#B1B1B1',
-    barStyle: { backgroundColor: '#fff', borderTopColor: '#B1B1B1', borderTopWidth: 1, height: 44, padding: 0 },
+    barStyle: { backgroundColor: '#fff', borderTopColor: '#B1B1B1', borderTopWidth: 1, height: 44, marginBottom: 10 },
   }
 );
 
