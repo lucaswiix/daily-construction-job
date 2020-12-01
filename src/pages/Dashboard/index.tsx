@@ -1,16 +1,13 @@
+import AsyncStorage from '@react-native-community/async-storage';
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
-import AsyncStorage from '@react-native-community/async-storage';
-import { IUser } from '../../redux/users/types';
-import { IMessage } from '../../redux/messages/types';
-import { DefaultRootState, useSelector } from 'react-redux';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSelector } from 'react-redux';
 import MessageCard from '../../components/MessageCard';
 import { ICompany } from '../../redux/companies/types';
-
+import { IMessage } from '../../redux/messages/types';
+import { IUser } from '../../redux/users/types';
 
 const Dashboard: React.FC = ({ navigation }: any) => {
   const [user, setUser] = useState<IUser>();
@@ -47,15 +44,12 @@ const Dashboard: React.FC = ({ navigation }: any) => {
   return (
     <SafeAreaView>
       {user && (
-
         <FlatList
-          data={messages.filter(message => message.companyId === user.companyId).sort((a, b) => a.createdAt < b.createdAt ? 1 : -1)}
+          data={messages.filter(message => message.companyId === user.companyId).sort((a, b) => a.createdAt > b.createdAt ? -1 : 1)}
           renderItem={renderItem}
           keyExtractor={item => item.id}
         />
-
       )}
-
     </SafeAreaView >
   );
 }
