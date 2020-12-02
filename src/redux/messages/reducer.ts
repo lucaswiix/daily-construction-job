@@ -1,6 +1,5 @@
-import { addHours } from 'date-fns';
+import { subHours } from 'date-fns';
 import { IMessage, IMessageReducer } from './types';
-
 
 export const INITIAL_STATE: { data: IMessage[] } = {
   data: [
@@ -10,7 +9,7 @@ export const INITIAL_STATE: { data: IMessage[] } = {
       ownerId: '1',
       message: 'Eae galerinha beleza?',
       photo: 'https://www.rhoadeslegal.com/files/2019/08/crush-injuries-construction-site-200x200.jpg',
-      createdAt: addHours(new Date, 1).toString(),
+      createdAt: subHours(new Date, 1).toString(),
     },
     {
       id: '2',
@@ -18,7 +17,7 @@ export const INITIAL_STATE: { data: IMessage[] } = {
       ownerId: '1',
       message: 'Show demais!?',
       photo: 'https://www.rhoadeslegal.com/files/2019/08/crush-injuries-construction-site-200x200.jpg',
-      createdAt: addHours(new Date, 2).toString(),
+      createdAt: subHours(new Date, 2).toString(),
 
     },
     {
@@ -27,7 +26,7 @@ export const INITIAL_STATE: { data: IMessage[] } = {
       ownerId: '2',
       message: 'kKKKKK IRADO?',
       photo: 'https://www.rhoadeslegal.com/files/2019/08/crush-injuries-construction-site-200x200.jpg',
-      createdAt: addHours(new Date, 3).toString(),
+      createdAt: subHours(new Date, 3).toString(),
     },
   ],
 }

@@ -83,7 +83,7 @@ const createBottomBar = createMaterialBottomTabNavigator(
     activeColor: '#73DA86',
 
     inactiveColor: '#B1B1B1',
-    barStyle: { backgroundColor: '#fff', borderTopColor: '#B1B1B1', borderTopWidth: 1, height: 44, marginBottom: 10 },
+    barStyle: { backgroundColor: '#fff', borderTopColor: '#B1B1B1', borderTopWidth: 1 },
   }
 );
 
@@ -93,7 +93,7 @@ const Main = createStackNavigator({
     navigationOptions: ({ navigation }) => ({
       title: `Diário de Obra`,
       headerStyle: {
-        backgroundColor: '#31C636'
+        backgroundColor: '#228855'
       },
       headerTitleStyle: {
         color: '#fff',
@@ -104,7 +104,12 @@ const Main = createStackNavigator({
     }),
 
   },
-  addMessage: AddMessage,
+  addMessage: {
+    screen: AddMessage,
+    navigationOptions: () => ({
+      title: 'Adicionar história'
+    })
+  },
 }, {
   initialRouteName: 'Default',
   cardStyle: {

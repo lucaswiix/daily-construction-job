@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     height: 100,
     // width:150,
     padding: 20,
-    backgroundColor: '#4CBC4C',
+    backgroundColor: '#11BB77',
     borderColor: '#fff',
     borderWidth: 1,
     alignItems: 'center',
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   button: {
     height: 46,
     alignSelf: 'stretch',
-    backgroundColor: '#4CBC4C',
+    backgroundColor: '#228855',
     borderRadius: 4,
     marginTop: 10,
     justifyContent: 'center',

@@ -34,12 +34,12 @@ const Login: React.FC<any> = ({ navigation }) => {
         await AsyncStorage.setItem('user', JSON.stringify(user));
         navigation.navigate('Main');
       } else {
-        setEmail('');
         setPassword('');
         setError('Usuário não encontrado =(');
       }
     } catch (error) {
       console.log(error);
+      setPassword('');
       setError('Aconteceu algum erro.');
     }
   }

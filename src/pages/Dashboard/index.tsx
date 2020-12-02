@@ -20,7 +20,7 @@ const Dashboard: React.FC = ({ navigation }: any) => {
       const user = await AsyncStorage.getItem('user');
       if (!user) {
         await AsyncStorage.clear();
-        return navigation('Login');
+        return navigation.navigate('Login');
       }
       const userData = JSON.parse(user);
       const companyData = companies.find(company => company.id === userData.companyId);

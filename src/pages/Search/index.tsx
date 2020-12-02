@@ -52,7 +52,7 @@ const Search: React.FC = () => {
         justifyContent: 'center'
       }}>
         <Searchbar
-          placeholder="Search"
+          placeholder="Buscar comentário"
           onChangeText={query => findByQuery(query)}
           value={searchQuery}
         />
@@ -65,7 +65,7 @@ const Search: React.FC = () => {
             keyExtractor={item => item.id}
           />
 
-        ) : searchQuery != null && (
+        ) : searchQuery != null && searchQuery.length > 0 && (
           <View style={{
             justifyContent: "center",
             padding: 20
