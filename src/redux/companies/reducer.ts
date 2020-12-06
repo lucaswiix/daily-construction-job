@@ -5,12 +5,12 @@ export const INITIAL_STATE: { data: ICompany[] } = {
   data: [
     {
       id: '1',
-      name: 'MV Construtora',
+      name: 'Portal do Sol Construtora',
       ownerId: '1',
     },
     {
       id: '2',
-      name: 'Livehere',
+      name: 'MV Construtora',
       ownerId: '3',
     },
     {
